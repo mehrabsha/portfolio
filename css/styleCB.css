@@ -331,8 +331,12 @@ z-index: -1;
     background-color: rgb(78, 78, 78 , .1);
     padding: 20px;
     -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-}
+    box-sizing: border-box;
+    cursor: pointer;
+    }
+    .services .service:hover{
+        transform: scale(1.1) rotate(4deg);
+    }
 .service i {
     color: #F44A4D;
     font-size: 1.4em;
