@@ -333,6 +333,7 @@ z-index: -1;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     cursor: pointer;
+    transition: .4s;
     }
     .services .service:hover{
         transform: scale(1.1) rotate(4deg);
