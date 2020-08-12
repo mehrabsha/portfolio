@@ -1,4 +1,4 @@
-particlesJS.load('section1', 'assets/config.json', function() {
+particlesJS.load('particle', 'assets/config.json', function() {
     console.log('callback - particles.js config loaded');
 });
 function smoothScroll(){
@@ -47,8 +47,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
         console.log(element.offsetWidth+"px");
         element.style.height = element.offsetWidth+"px";
     });
-
-
     new Typewriter('#write', {
         strings: ['WEB DEVELOPER', 'UI DESIGNER' , 'ANDROID DEVELOPER'],
         autoStart: true,

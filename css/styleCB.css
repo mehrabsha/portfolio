@@ -9,8 +9,12 @@ body{
     padding: 0;
     overflow-x: hidden;
     font-size: 24px;
+    background-color: #1c1c1c;
 }
-
+a{
+    text-decoration: none;
+    color: white;
+}
 section{
     width: 100%;
     color: white;
@@ -42,6 +46,29 @@ nav .menu{
 
 .clearfix{
     clear: both;
+}
+.fullwidth{
+    width: 100% !important;
+}
+.s4{
+    width: 25% !important;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+.s4:hover{
+    -webkit-transform: scale(.8);
+        -ms-transform: scale(.8);
+            transform: scale(.8);
+}
+.p5 {
+    padding: 70px;
+}
+.p5#particle canvas{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -999;
 }
 nav ul{
     list-style: none;
@@ -85,7 +112,7 @@ nav .brand{
 
 
 /* ================ SECTION 1 ================ */
-#section1{
+.section1{
     background-image: url('../assets/img/back.jpg');
     background-size: cover;
     z-index: 0;
@@ -102,12 +129,12 @@ nav .brand{
         -ms-flex-align: center;
             align-items: center;
 }
-#section1 canvas{
+.section1#particle canvas{
 position: absolute;
 z-index: -1;
 
 }
-#section1::after{
+.section1::after{
     content: '';
     width: 100%;
     height: 100%;
@@ -256,7 +283,7 @@ z-index: -1;
       padding: 15px 30px;
       font-family: 'Roboto';
       font-weight: 400;
-      font-size: .5rem;
+      font-size: .7rem;
       letter-spacing: 2px;
       margin-top: 20px;
       cursor: pointer;
@@ -331,13 +358,9 @@ z-index: -1;
     background-color: rgb(78, 78, 78 , .1);
     padding: 20px;
     -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+            box-sizing: border-box;
     cursor: pointer;
-    transition: .4s;
-    }
-    .services .service:hover{
-        transform: scale(1.1) rotate(4deg);
-    }
+}
 .service i {
     color: #F44A4D;
     font-size: 1.4em;
@@ -390,14 +413,14 @@ z-index: -1;
 
 .works{
     width: 70%;
-    height: 70%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
 }
 .works .work{
     width: 33.333%;
@@ -407,6 +430,7 @@ z-index: -1;
     cursor: pointer;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
+    color: white;
 }
 .work img{
     width: 100%;
@@ -554,6 +578,13 @@ footer i{
 
 
 @media only screen and (max-width: 768px) {
+    .s4{
+        width: 100% !important;
+        margin: 7px 0;
+    }
+    .p5{
+        padding: 20px 10px;
+    }
 nav{
     padding: 0px 20px;
     background-color: black;
@@ -683,6 +714,9 @@ padding: 50px 20px;
 .services .service{
     width: 90%;
     padding: 60px 0;
+    -webkit-transition: .4s;
+    -o-transition: .4s;
+    transition: .4s;
 }
 
 /*************4*/
